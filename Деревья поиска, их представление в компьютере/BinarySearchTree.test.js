@@ -45,7 +45,7 @@ describe('BinarySearchTree', () => {
         bst.insert(17);
         bst.insert(25);
 
-        bst.remove(8); // Удаляем листовой узел
+        bst.remove(8);
 
         expect(bst.search(8)).toBe(false);
         expect(bst.root.left.left).toBeNull();
@@ -59,7 +59,7 @@ describe('BinarySearchTree', () => {
         bst.insert(12);
         bst.insert(17);
 
-        bst.remove(20); // Удаляем узел с одним ребенком (25 нет, добавим 17 как единственный ребенок)
+        bst.remove(20);
 
         expect(bst.search(20)).toBe(false);
         expect(bst.root.right.key).toBe(17);
@@ -74,10 +74,10 @@ describe('BinarySearchTree', () => {
         bst.insert(17);
         bst.insert(25);
 
-        bst.remove(10); // Удаляем узел с двумя детьми
+        bst.remove(10);
 
         expect(bst.search(10)).toBe(false);
-        expect(bst.root.left.key).toBe(12); // Замена на минимальный из правого поддерева
+        expect(bst.root.left.key).toBe(12);
         expect(bst.root.left.left.key).toBe(8);
     });
 
