@@ -57,7 +57,6 @@ describe('FordFulkerson Algorithm Tests', () => {
 
     test('Тест 5: Большой граф с несколькими путями и пересекающимися потоками', () => {
         const graph = new Graph(6);
-        // Источник: 0, Сток: 5
         graph.addEdge(0, 1, 16);
         graph.addEdge(0, 2, 13);
         graph.addEdge(1, 2, 10);
