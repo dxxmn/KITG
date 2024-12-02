@@ -5,7 +5,6 @@ class FordFulkerson {
         this.graph = graph;
     }
 
-    // Метод для поиска пути с помощью BFS и возврата предков для восстановления пути
     bfs(source, sink, parent) {
         const visited = Array(this.graph.V).fill(false);
         const queue = [];
@@ -32,14 +31,11 @@ class FordFulkerson {
         return false;
     }
 
-    // Метод для вычисления максимального потока от источника к стоку
     maxFlow(source, sink) {
         const parent = Array(this.graph.V).fill(-1);
         let maxFlow = 0;
 
-        // Повторяем, пока существует путь из источника в сток
         while (this.bfs(source, sink, parent)) {
-            // Находим минимальную пропускную способность на найденном пути
             let pathFlow = Infinity;
             let v = sink;
             while (v !== source) {
@@ -48,7 +44,6 @@ class FordFulkerson {
                 v = u;
             }
 
-            // Обновляем пропускные способности ребер и обратных ребер
             v = sink;
             while (v !== source) {
                 const u = parent[v];
@@ -57,7 +52,6 @@ class FordFulkerson {
                 v = u;
             }
 
-            // Увеличиваем общий поток
             maxFlow += pathFlow;
         }
 

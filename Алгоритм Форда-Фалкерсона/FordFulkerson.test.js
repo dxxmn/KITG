@@ -3,7 +3,6 @@ const FordFulkerson = require('./FordFulkerson');
 
 describe('FordFulkerson Algorithm Tests', () => {
     test('Тест 1: Простой граф с двумя непротиворечивыми путями', () => {
-        // Создаём граф с 4 вершинами (0: источник, 3: сток)
         const graph = new Graph(4);
         graph.addEdge(0, 1, 100);
         graph.addEdge(0, 2, 100);
