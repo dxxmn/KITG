@@ -33,8 +33,7 @@ describe('FordFulkerson Algorithm Tests', () => {
         const graph = new Graph(3);
         graph.addEdge(0, 1, 10);
         graph.addEdge(1, 0, 5);
-        graph.addEdge(1, 2, 0); // Пропускная способность 0
-
+        graph.addEdge(1, 2, 0);
         const fordFulkerson = new FordFulkerson(graph);
         const maxFlow = fordFulkerson.maxFlow(0, 2);
 
@@ -44,9 +43,9 @@ describe('FordFulkerson Algorithm Tests', () => {
     test('Тест 4: Граф с циклом', () => {
         const graph = new Graph(4);
         graph.addEdge(0, 1, 10);
-        graph.addEdge(0, 2, 10); // Добавлено ребро 0 → 2
+        graph.addEdge(0, 2, 10);
         graph.addEdge(1, 2, 5);
-        graph.addEdge(2, 1, 15); // Цикл между 1 и 2
+        graph.addEdge(2, 1, 15);
         graph.addEdge(2, 3, 10);
         graph.addEdge(1, 3, 10);
 
