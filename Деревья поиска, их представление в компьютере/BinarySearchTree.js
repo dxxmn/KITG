@@ -110,12 +110,5 @@ class BinarySearchTree {
             this._inOrder(node.right, callback);
         }
     }
-
-    //МЕТОД ДЛЯ ВЫВОДА ДЕРЕВА В КОНСОЛЬ
-    printInOrder() {
-        const result = [];
-        this.inOrderTraversal(key => result.push(key));
-        console.log(result.join(' '));
-    }
 }
 module.exports = BinarySearchTree

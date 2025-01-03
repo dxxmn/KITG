@@ -1,6 +1,6 @@
 const BinarySearchTree = require('./BinarySearchTree');
 
-describe('BinarySearchTree', () => {
+describe('BinarySearchTree Tests', () => {
     let bst;
 
     beforeEach(() => {
