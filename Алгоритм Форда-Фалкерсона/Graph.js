@@ -15,16 +15,6 @@ class Graph {
     setCapacity(from, to, capacity) {
         this.adjMatrix[from][to] = capacity;
     }
-
-    getNeighbors(v) {
-        const neighbors = [];
-        for (let i = 0; i < this.V; i++) {
-            if (this.adjMatrix[v][i] > 0) {
-                neighbors.push(i);
-            }
-        }
-        return neighbors;
-    }
 }
 
 module.exports = Graph;
